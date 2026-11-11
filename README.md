@@ -1,12 +1,39 @@
-# SocialMediaMonitor
-a desktop tool to help you centralize all your network stuff into one signle panel control
-<img width="1024" height="1024" alt="5188c9f8-d405-4f8a-9614-11c7998408ee" src="https://github.com/user-attachments/assets/3bfe3ded-ee1f-48e7-9a7b-809c7668e542" />
+<img src="artemis-project-cover.svg" alt="Qt desktop interface - Learning prototype" width="100%" />
 
+# Social Media Monitor UI Study
 
-![Screenshot_2025-01-26_03_04_56](https://github.com/user-attachments/assets/ce1f0085-e4ce-442a-a1c6-c458b2771862)
+A Qt desktop learning project focused on an animated welcome screen, registration/login views and local database interaction.
 
+**Status:** interface prototype. **Stack:** C++17, Qt Quick/QML, Qt SQL, SQLite and CMake.
 
-![Screenshot_2025-01-26_03_05_04](https://github.com/user-attachments/assets/d7a5439e-16de-4867-9e2f-c1434c2fe966)
-![Screenshot_2025-01-26_03_05_09](https://github.com/user-attachments/assets/fbef59d5-f6f0-4709-a80f-723975b1f0ef)
-![Screenshot_2025-01-26_03_05_15](https://github.com/user-attachments/assets/3430d2b9-2718-4199-99cb-7fc81e315abc)
-![Screenshot_2025-01-26_03_05_27](https://github.com/user-attachments/assets/3203ffeb-cc9c-46ce-939c-5e853ce82dc8)
+## What the snapshot contains
+
+- A C++ entry point that exposes a database object to QML.
+- Welcome-screen and registration/login components.
+- Database methods for user existence, registration and login.
+- A small HTML page and existing visual assets.
+
+This snapshot does not establish a complete social-media monitoring backend, platform integrations or an operational analytics service.
+
+## Project map
+
+| File | Role |
+| --- | --- |
+| `CMakeLists.txt` | Build target named `Leolio` |
+| `main.cpp` and `main.qml` | Application entry points |
+| `MainContent.qml` | Welcome screen |
+| `Registration.qml` | Registration/login interface |
+| `database.cpp` and `database.h` | Local database integration |
+| `qml.qrc` | Resource declarations |
+
+## Development environment
+
+Open `CMakeLists.txt` in a Qt-capable IDE. The project declares CMake 3.16 or later, C++17, and Qt Core, Quick and Sql components, with Qt 5/6 build branches. Cross-version compatibility has not been verified by this repository.
+
+## Current limits and next steps
+
+Treat the authentication code as a learning implementation. A production credential-handling model has not been established. Build outputs and a local `users.db` are tracked under `build/`; use fresh synthetic data for demonstrations and remove local runtime artefacts from future source commits after review.
+
+Useful next steps are a reproducible build, source-only repository hygiene, interface tests and a clear choice between a UI study and a separately specified monitoring application.
+
+No repository-wide licence file is currently included. The origin and reuse terms of the artwork should also be documented.
